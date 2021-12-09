@@ -38,6 +38,12 @@ To get a local copy up and running:
     cd Blog-SPA
     ```
 
+## Testing 
+- After cloning first run bundle install
+- Then run rails webpacker:install to install webpack dependencies
+- Run bundle install again
+- Finally, run bundle exec rspec to see the tests pass
+
 ## Author
 
 👤 **Stephan Annandale**
