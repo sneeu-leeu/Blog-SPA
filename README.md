@@ -23,6 +23,21 @@
 - Create and run migration files.
 - Add table and column names based on ERD diagram.
 
+### Milestone 4:
+
+- Create model classes for all entities as shown in the ERD diagram.
+- Set up associations between models.
+- Your models should include:
+  - A method that returns the 3 most recent posts for a given user.
+  - A method that updates the posts counter for a user.
+  - A method which returns the 5 most recent comments for a given post.
+  - A method that updates the comments counter for a post.
+  - A method that updates the likes counter for a post.
+- Make current user data available to all controllers.
+ - Create a method called current_user in your ApplicationController.
+ - A current_user method should return the first user from a database.
+
+
 ## Built With
 - Ruby
 - Ruby on rails
