@@ -37,6 +37,12 @@
  - Create a method called current_user in your ApplicationController.
  - A current_user method should return the first user from a database.
 
+## Milestone 5:
+
+- Use preprocessed HTML file with embedded Ruby code.
+- Use layouts and templates for shared content
+- Implement the design from the sneak peek wireframes.
+
 
 ## Built With
 - Ruby
