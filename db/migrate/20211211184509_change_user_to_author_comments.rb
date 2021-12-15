@@ -1,5 +1,12 @@
 class ChangeUserToAuthorComments < ActiveRecord::Migration[6.1]
-  def change 
-    add_reference :author, null: false, foreign_key: { to_table: 'users' }
+  def self.up 
+    change_table :comments do |t|
+      t.references :author, foreign_key: {to_table: 'users'}
+    end
+  end
+  def self.down
+    change_table :comments do |t|
+      t.references :user, null: false, foreign_key: true
+    end
   end
 end
