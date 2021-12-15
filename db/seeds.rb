@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-10.times do
+10.times do |p|
   name = Faker::Name.first_name
-  bio_quote = Faker::Quotes::Shakespeare
+  bio_quote = Faker::Quotes::Shakespeare.hamlet_quote
     user = User.create(
       name: name,
       photo: "https://randomuser.me/api/portraits/men/jpg",
@@ -19,13 +19,14 @@ require 'faker'
       post = Post.create(
         user_id: user.id,
         title: 'Shakespear bish',
-        text: bio_quote)
-        7.times do |j|
-          comment = Comment.create(
-            user_id: user.id,
-            posts_id: post.id,
-            text: 'Thau Post art scheit beith a bit less lameth'
-          )
-        end
+        text: bio_quote
+      )
+      7.times do |j|
+        comment = Comment.create(
+          user_id: user.id,
+          posts_id: post.id,
+          text: 'Thau Post art scheit beith a bit less lameth'
+        )
+      end
     end
 end
